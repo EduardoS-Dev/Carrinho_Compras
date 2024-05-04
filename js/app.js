@@ -27,14 +27,17 @@ function adicionar(){
         totalGeral = totalGeral + preco;
         let campoTotal = document.getElementById('valor-total');
         campoTotal.textContent = `R$ ${totalGeral}`;
+        document.getElementById('quantidade').value = 0;
     }
     
 }
 
 function limpar(){
     if(confirm('Deseja limpar o carrinho? ')){
+        totalGeral = 0;
         document.getElementById('lista-produtos').innerHTML = '';
         document.getElementById('valor-total').textContent = 'R$ 0';
+        document.getElementById('quantidade').value = 0;
     }
     
 }
